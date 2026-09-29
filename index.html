@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="description" content="Undangan Resepsi Perkawinan Lana & Iis - Minggu, 04 Oktober 2026">
+    <meta property="og:title" content="Undangan Pernikahan: Lana & Iis">
+    <meta property="og:description" content="Minggu, 04 Oktober 2026. Mohon doa restu dan kehadirannya.">
+    <meta property="og:image" content="https://undangandigital16.github.io/undangan-Lana-IIs/cover.png">
+    <meta property="og:image:secure_url" content="https://undangandigital16.github.io/undangan-Lana-IIs/cover.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://undangandigital16.github.io/undangan-Lana-IIs/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Undangan Lana & Iis">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Undangan Pernikahan: Lana & Iis">
+    <meta name="twitter:description" content="Minggu, 04 Oktober 2026. Mohon doa restu dan kehadirannya.">
+    <meta name="twitter:image" content="https://undangandigital16.github.io/undangan-Lana-IIs/cover.png">
+    <title>Undangan Pernikahan | Lana & Iis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --bg-elevated: #111111;
+            --bg-card: #161616;
+            --bg-soft: #1c1c1c;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(212, 175, 120, 0.25);
+            --gold: #d4af78;
+            --gold-light: #e8d5b5;
+            --gold-dark: #a88b5a;
+            --text: #f0ebe3;
+            --text-muted: #9a9288;
+            --text-dim: #6b6560;
+            --accent: #c0392b;
+            --success: #2ecc71;
+            --radius: 18px;
+            --radius-sm: 12px;
+            --shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+            --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-body: 'Outfit', sans-serif;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-script: 'Great Vibes', cursive;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+        body {
+            font-family: var(--font-body);
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.65;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+        body.locked { overflow: hidden; height: 100dvh; }
+        img { max-width: 100%; display: block; }
+        a { color: inherit; text-decoration: none; }
+        button { font-family: inherit; cursor: pointer; border: none; background: none; }
+        .script { font-family: var(--font-script); color: var(--gold); font-weight: 400; line-height: 1.2; }
+        #cover {
+            position: fixed; inset: 0; z-index: 9999;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
+            text-align: center;
+            padding: 24px;
+            padding-top: max(24px, env(safe-area-inset-top));
+            padding-bottom: max(24px, env(safe-area-inset-bottom));
+            padding-left: max(24px, env(safe-area-inset-left));
+            padding-right: max(24px, env(safe-area-inset-right));
+            background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.82) 100%), url('cover.png') center/cover no-repeat;
+            transition: transform 1.15s cubic-bezier(0.77, 0, 0.175, 1);
+            will-change: transform;
+        }
+        #cover.is-hidden { transform: translateY(-105%); pointer-events: none; }
+        #cover .label { font-size: 0.8rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-light); opacity: 0.85; margin-bottom: 12px; }
+        #cover h1 { font-size: clamp(3.4rem, 13vw, 5.8rem); margin-bottom: 28px; text-shadow: 0 4px 24px rgba(0,0,0,0.5); }
+        .guest-card {
+            background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+            border-radius: var(--radius); padding: 20px 36px; margin-bottom: 32px;
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        .guest-card:hover { transform: scale(1.03); box-shadow: 0 16px 40px rgba(0,0,0,0.35); }
+        .guest-card .to { font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 6px; }
+        .guest-card .name { font-size: 1.55rem; font-weight: 500; color: #fff; }
+        .btn-open {
+            display: inline-flex; align-items: center; gap: 10px; padding: 15px 40px;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: #0a0a0a;
+            font-size: 0.95rem; font-weight: 600; letter-spacing: 0.04em; border-radius: 100px;
+            box-shadow: 0 8px 28px rgba(212, 175, 120, 0.3);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative; overflow: hidden;
+        }
+        .btn-open::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.25), transparent);
+            transform: translateX(-100%); transition: transform 0.6s ease;
+        }
+        .btn-open:hover { transform: translateY(-4px) scale(1.04); box-shadow: 0 14px 36px rgba(212, 175, 120, 0.4); }
+        .btn-open:hover::after { transform: translateX(100%); }
+        .btn-open:active { transform: translateY(-1px) scale(1.01); }
+        #main { opacity: 0; visibility: hidden; transition: opacity 1.1s ease; }
+        #main.is-visible { opacity: 1; visibility: visible; }
+        section { padding: 100px 20px; position: relative; }
+        .container { max-width: 720px; margin: 0 auto; }
+        .section-label { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); opacity: 0.7; margin-bottom: 10px; }
+        .divider { width: 48px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); margin: 0 auto 28px; }
+        .hero {
+            min-height: 100dvh;
+            min-height: 100svh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0.88) 70%, var(--bg) 100%), url('foto2.jpeg') center top/cover no-repeat;
+            background-attachment: scroll;
+            padding: 48px 20px 40px;
+        }
+        .hero .label { font-size: 0.85rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+        .hero h1 { font-size: clamp(4rem, 15vw, 6.5rem); margin: 8px 0 16px; text-shadow: 0 4px 20px rgba(0,0,0,0.6); }
+        .hero .date { font-size: 1.1rem; letter-spacing: 0.15em; color: var(--gold-light); font-weight: 300; }
+        .couple { background: var(--bg); text-align: center; }
+        .couple .intro { max-width: 520px; margin: 0 auto 48px; color: var(--text-muted); font-size: 0.98rem; line-height: 1.8; }
+        .couple-grid { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 28px; }
+        .person {
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 36px 28px; max-width: 300px; width: 100%;
+            transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+            position: relative;
+        }
+        .person::before {
+            content: '✦'; position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+            font-size: 0.9rem; color: var(--gold); opacity: 0.5; background: var(--bg); padding: 0 10px;
+        }
+        .person:hover { transform: translateY(-8px); border-color: var(--border-strong); box-shadow: var(--shadow); }
+        .person h2 { font-size: 2.4rem; margin-bottom: 14px; }
+        .person .parents { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
+        .person .parents strong { color: var(--text); font-weight: 500; }
+        .amp { font-size: 3.2rem; opacity: 0.8; }
+        .event { background: var(--bg-elevated); text-align: center; }
+        .event-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 48px 28px; box-shadow: var(--shadow); }
+        .event-card h2 { font-size: clamp(2.4rem, 8vw, 3.2rem); margin-bottom: 18px; }
+        .event-card .when { font-size: 1.2rem; font-weight: 500; color: var(--gold-light); margin-bottom: 4px; }
+        .event-card .time { color: var(--text-muted); font-size: 0.98rem; margin-bottom: 28px; }
+        .event-card .where { border-top: 1px solid var(--border); padding-top: 28px; margin-bottom: 24px; }
+        .event-card .where strong { display: block; font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; font-weight: 500; }
+        .event-card .where address { font-style: normal; color: var(--text-muted); line-height: 1.75; font-size: 0.98rem; }
+        .actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin: 22px 0 28px; }
+        .btn {
+            display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 12px 24px; border-radius: 100px; font-size: 0.88rem; font-weight: 500;
+            transition: all var(--transition); border: 1px solid transparent;
+        }
+        .btn-gold { background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: #0a0a0a; }
+        .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(212, 175, 120, 0.3); }
+        .btn-outline { background: transparent; border-color: var(--border-strong); color: var(--gold-light); }
+        .btn-outline:hover { background: rgba(212, 175, 120, 0.08); transform: translateY(-2px); }
+        .btn.is-copied { background: var(--success); border-color: var(--success); color: #fff; }
+        .map-wrap { border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--border); background: #0a0a0a; margin-bottom: 32px; }
+        .map-wrap iframe { width: 100%; height: 260px; border: 0; display: block; filter: grayscale(30%) contrast(1.05); }
+        .countdown { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+        .unit {
+            background: var(--bg-soft); border: 1px solid var(--border); border-radius: var(--radius-sm);
+            min-width: 74px; padding: 16px 12px; transition: transform var(--transition), border-color var(--transition);
+        }
+        .unit:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+        .unit .num { display: block; font-size: 1.75rem; font-weight: 600; color: var(--gold); font-variant-numeric: tabular-nums; line-height: 1.2; }
+        .unit .lbl { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-dim); margin-top: 4px; }
+        .started {
+            display: none; margin-top: 28px; padding: 20px; border: 1px dashed var(--accent);
+            border-radius: var(--radius-sm); color: var(--accent); font-size: 1.3rem; font-weight: 500;
+            background: rgba(192, 57, 43, 0.06);
+        }
+        .started.is-active { display: block; animation: pulse 2s ease infinite; }
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(192, 57, 43, 0.3); }
+            50% { box-shadow: 0 0 0 10px rgba(192, 57, 43, 0); }
+        }
+        /* Gallery — 2 foto di tengah */
+        .gallery { margin-top: 48px; text-align: center; }
+        .gallery-title { font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); opacity: 0.7; margin-bottom: 20px; }
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: stretch;
+            gap: 16px;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        .gallery-item {
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            aspect-ratio: 3 / 4;
+            background: var(--bg-soft);
+            cursor: pointer;
+            transition: transform var(--transition), border-color var(--transition);
+            width: calc(50% - 8px);
+            max-width: 240px;
+            flex: 0 1 240px;
+        }
+        .gallery-item:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+        .gallery-item:hover img { transform: scale(1.05); }
+        #lightbox {
+            position: fixed; inset: 0; z-index: 10010; background: rgba(0, 0, 0, 0.92);
+            display: none; align-items: center; justify-content: center; padding: 20px;
+        }
+        #lightbox.is-open { display: flex; }
+        #lightbox img { max-width: min(920px, 100%); max-height: 85vh; border-radius: var(--radius-sm); border: 1px solid var(--border-strong); box-shadow: 0 20px 60px rgba(0,0,0,0.6); }
+        #lightbox .lb-close { position: absolute; top: 20px; right: 24px; color: var(--gold); font-size: 1.8rem; cursor: pointer; line-height: 1; background: none; border: none; }
+        #lightbox .lb-nav {
+            position: absolute; top: 50%; transform: translateY(-50%); color: var(--gold); font-size: 2rem; cursor: pointer;
+            background: rgba(22,22,22,0.8); border: 1px solid var(--border); width: 44px; height: 44px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+        }
+        #lightbox .lb-prev { left: 16px; }
+        #lightbox .lb-next { right: 16px; }
+        .hosts { background: var(--bg-elevated); text-align: center; }
+        .hosts .desc { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 32px; line-height: 1.75; }
+        .host-list { list-style: none; max-width: 360px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+        .host-list li {
+            display: flex; align-items: center; gap: 14px; padding: 14px 18px; background: var(--bg-card);
+            border: 1px solid var(--border); border-radius: var(--radius-sm); font-size: 0.98rem; font-weight: 400;
+            transition: all var(--transition);
+        }
+        .host-list li:hover { transform: translateX(6px); border-color: var(--border-strong); color: var(--gold-light); }
+        .host-list .num { color: var(--gold); font-weight: 600; font-size: 0.85rem; min-width: 20px; }
+        .footer { background: var(--bg); text-align: center; padding: 80px 20px 100px; }
+        .footer h2 { font-size: clamp(2.8rem, 10vw, 3.8rem); margin-bottom: 12px; }
+        .footer .closing { color: var(--text-muted); letter-spacing: 0.08em; font-size: 0.95rem; }
+        .footer .names { margin-top: 10px; font-size: 1.35rem; font-weight: 500; color: var(--gold); }
+        #music-btn {
+            position: fixed; bottom: 24px; right: 24px; width: 52px; height: 52px; border-radius: 50%;
+            background: var(--bg-card); border: 1px solid var(--border-strong); color: var(--gold); font-size: 1.25rem;
+            display: none; align-items: center; justify-content: center; z-index: 1000;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.4); transition: all var(--transition);
+        }
+        #music-btn.is-visible { display: flex; }
+        #music-btn:hover { transform: scale(1.1); background: var(--bg-soft); }
+        #music-btn.is-playing { animation: spin 8s linear infinite; }
+        #music-btn.is-paused { opacity: 0.65; animation: none; }
+        @keyframes spin { to { transform: rotate(360deg); } }
+        #toast {
+            position: fixed; bottom: 96px; left: 50%; transform: translateX(-50%) translateY(16px);
+            background: var(--bg-card); color: var(--text); border: 1px solid var(--border-strong);
+            padding: 12px 28px; border-radius: 100px; font-size: 0.88rem; opacity: 0; visibility: hidden;
+            transition: all 0.3s ease; z-index: 10001; white-space: nowrap; box-shadow: 0 8px 28px rgba(0,0,0,0.45);
+        }
+        #toast.is-show { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        #progress {
+            position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+            background: linear-gradient(90deg, var(--gold-dark), var(--gold)); z-index: 10002;
+            transition: width 0.1s linear; pointer-events: none;
+        }
+        .quote { background: var(--bg-elevated); text-align: center; padding: 90px 20px; }
+        .quote-card {
+            max-width: 560px; margin: 0 auto; padding: 40px 28px; background: var(--bg-card);
+            border: 1px solid var(--border); border-radius: var(--radius); position: relative;
+        }
+        .quote-card::before {
+            content: '"'; font-family: var(--font-script); font-size: 4rem; color: var(--gold); opacity: 0.25;
+            position: absolute; top: 8px; left: 20px; line-height: 1;
+        }
+        .quote-text { font-family: var(--font-serif); font-size: 1.25rem; font-style: italic; color: var(--gold-light); line-height: 1.8; margin-bottom: 16px; }
+        .quote-src { font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); }
+        .extra-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 28px; }
+        #to-top {
+            position: fixed; bottom: 24px; left: 24px; width: 48px; height: 48px; border-radius: 50%;
+            background: var(--bg-card); border: 1px solid var(--border-strong); color: var(--gold); font-size: 1.1rem;
+            display: none; align-items: center; justify-content: center; z-index: 1000;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.4); transition: all var(--transition); opacity: 0;
+        }
+        #to-top.is-visible { display: flex; opacity: 1; }
+        #to-top:hover { transform: scale(1.1); background: var(--bg-soft); }
+        #confetti { position: fixed; inset: 0; pointer-events: none; z-index: 10003; }
+        .particle {
+            position: absolute; width: 4px; height: 4px; background: var(--gold); border-radius: 50%;
+            opacity: 0.35; animation: rise linear infinite; pointer-events: none;
+        }
+        @keyframes rise {
+            0% { transform: translateY(100vh) scale(0.4); opacity: 0; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+        }
+        /* ===== Tablet ===== */
+        @media (max-width: 900px) {
+            section { padding: 80px 24px; }
+            .container { max-width: 640px; }
+            .person { max-width: 280px; }
+            .person h2 { font-size: 2.1rem; }
+            .event-card { padding: 40px 24px; }
+            .gallery-grid { max-width: 480px; gap: 14px; }
+            .gallery-item { max-width: 220px; flex: 0 1 220px; }
+        }
+
+        /* ===== Mobile ===== */
+        @media (max-width: 640px) {
+            section { padding: 64px 16px; }
+            .container { max-width: 100%; }
+
+            #cover { padding: 20px 16px; }
+            #cover .label { font-size: 0.7rem; letter-spacing: 0.2em; }
+            #cover h1 { font-size: clamp(2.8rem, 14vw, 4rem); margin-bottom: 20px; }
+            .guest-card {
+                padding: 16px 22px;
+                margin-bottom: 24px;
+                width: 100%;
+                max-width: 320px;
+            }
+            .guest-card .to { font-size: 0.7rem; }
+            .guest-card .name { font-size: 1.25rem; word-break: break-word; }
+            .btn-open {
+                padding: 14px 28px;
+                font-size: 0.9rem;
+                width: 100%;
+                max-width: 280px;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 92svh;
+                padding: 40px 16px 32px;
+            }
+            .hero .label { font-size: 0.75rem; letter-spacing: 0.22em; }
+            .hero h1 { font-size: clamp(3rem, 16vw, 4.5rem); }
+            .hero .date { font-size: 0.95rem; letter-spacing: 0.1em; }
+
+            .couple .intro { font-size: 0.92rem; margin-bottom: 36px; padding: 0 4px; }
+            .couple-grid { gap: 20px; flex-direction: column; }
+            .person {
+                max-width: 100%;
+                width: 100%;
+                padding: 28px 20px;
+            }
+            .person h2 { font-size: 1.9rem; }
+            .amp { font-size: 2.4rem; margin: -4px 0; }
+
+            .quote { padding: 64px 16px; }
+            .quote-card { padding: 32px 20px; }
+            .quote-text { font-size: 1.05rem; }
+
+            .event-card { padding: 32px 18px; border-radius: 14px; }
+            .event-card h2 { font-size: clamp(2rem, 10vw, 2.6rem); }
+            .event-card .when { font-size: 1.05rem; }
+            .event-card .time { font-size: 0.92rem; }
+            .event-card .where address { font-size: 0.92rem; }
+
+            .actions {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .extra-actions {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+            .btn {
+                width: 100%;
+                padding: 13px 20px;
+                font-size: 0.9rem;
+                min-height: 48px;
+            }
+
+            .map-wrap iframe { height: 220px; }
+
+            .countdown {
+                gap: 8px;
+                width: 100%;
+            }
+            .unit {
+                min-width: 0;
+                flex: 1 1 0;
+                padding: 12px 6px;
+            }
+            .unit .num { font-size: 1.35rem; }
+            .unit .lbl { font-size: 0.65rem; }
+
+            .gallery { margin-top: 36px; }
+            .gallery-grid {
+                max-width: 100%;
+                gap: 12px;
+                flex-wrap: nowrap;
+            }
+            .gallery-item {
+                width: calc(50% - 6px);
+                max-width: none;
+                flex: 1 1 0;
+            }
+
+            .host-list { max-width: 100%; }
+            .host-list li {
+                padding: 12px 14px;
+                font-size: 0.92rem;
+            }
+
+            .footer { padding: 64px 16px 100px; }
+            .footer h2 { font-size: clamp(2.4rem, 12vw, 3.2rem); }
+            .footer .names { font-size: 1.2rem; }
+
+            #music-btn {
+                bottom: max(16px, env(safe-area-inset-bottom));
+                right: max(16px, env(safe-area-inset-right));
+                width: 48px;
+                height: 48px;
+            }
+            #to-top {
+                bottom: max(16px, env(safe-area-inset-bottom));
+                left: max(16px, env(safe-area-inset-left));
+                width: 44px;
+                height: 44px;
+            }
+            #toast {
+                bottom: 90px;
+                max-width: calc(100vw - 32px);
+                white-space: normal;
+                text-align: center;
+                font-size: 0.82rem;
+                padding: 12px 18px;
+            }
+            #lightbox .lb-nav { width: 40px; height: 40px; font-size: 1.6rem; }
+            #lightbox .lb-prev { left: 10px; }
+            #lightbox .lb-next { right: 10px; }
+            #lightbox .lb-close { top: 14px; right: 16px; }
+        }
+
+        /* ===== HP kecil ===== */
+        @media (max-width: 380px) {
+            #cover h1 { font-size: 2.6rem; }
+            .hero h1 { font-size: 2.8rem; }
+            .person h2 { font-size: 1.7rem; }
+            .unit .num { font-size: 1.2rem; }
+            .guest-card { padding: 14px 16px; }
+            .btn-open { padding: 13px 22px; font-size: 0.85rem; }
+        }
+
+        /* ===== Landscape HP ===== */
+        @media (max-height: 480px) and (orientation: landscape) {
+            #cover { padding: 12px 20px; }
+            #cover h1 { font-size: 2.4rem; margin-bottom: 10px; }
+            .guest-card { padding: 10px 20px; margin-bottom: 12px; }
+            .btn-open { padding: 10px 24px; }
+            .hero { min-height: auto; padding: 48px 20px; }
+        }
+
+        /* Desktop besar */
+        @media (min-width: 1100px) {
+            .container { max-width: 760px; }
+            .gallery-grid { max-width: 560px; gap: 20px; }
+            .gallery-item { max-width: 260px; flex: 0 1 260px; }
+        }
+    </style>
+</head>
+<body class="locked">
+    <div id="progress" aria-hidden="true"></div>
+    <canvas id="confetti" aria-hidden="true"></canvas>
+    <audio id="bg-music" loop preload="auto">
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+    <button id="music-btn" aria-label="Kontrol musik" title="Musik">🎵</button>
+    <button id="to-top" aria-label="Kembali ke atas" title="Ke atas">↑</button>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div id="lightbox" aria-hidden="true">
+        <button class="lb-close" type="button" aria-label="Tutup">×</button>
+        <button class="lb-nav lb-prev" type="button" aria-label="Sebelumnya">‹</button>
+        <img src="" alt="Preview galeri" id="lightbox-img">
+        <button class="lb-nav lb-next" type="button" aria-label="Berikutnya">›</button>
+    </div>
+    <div id="cover">
+        <div id="particles" aria-hidden="true"></div>
+        <p class="label" data-aos="fade-down" data-aos-duration="900">Undangan Resepsi Perkawinan</p>
+        <h1 class="script" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="1300">Lana & Iis</h1>
+        <div class="guest-card" data-aos="fade-up" data-aos-delay="400" data-aos-duration="900">
+            <p class="to">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+            <p class="name" id="guest-name">Tamu Undangan</p>
+        </div>
+        <button class="btn-open float" id="btn-open" data-aos="zoom-in-up" data-aos-delay="700">✉ Buka Undangan</button>
+    </div>
+    <div id="main">
+        <section class="hero">
+            <p class="label" data-aos="fade-down" data-aos-duration="800">The Wedding Of</p>
+            <h1 class="script" data-aos="zoom-in" data-aos-duration="1300" data-aos-delay="100">Lana & Iis</h1>
+            <p class="date" data-aos="fade-up" data-aos-duration="800" data-aos-delay="250">Minggu, 04 Oktober 2026</p>
+        </section>
+        <section class="couple">
+            <div class="container">
+                <p class="section-label" data-aos="fade-up">Mempelai</p>
+                <div class="divider" data-aos="fade-up"></div>
+                <p class="intro" data-aos="fade-up" data-aos-delay="80">
+                    Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan resepsi perkawinan putra-putri kami:
+                </p>
+                <div class="couple-grid">
+                    <div class="person" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="120">
+                        <h2 class="script">M. Maulana, S.E.<br>(Lana)</h2>
+                        <p class="parents">Putra Pertama dari<br><strong>Bpk. Rudi & Ibu Neni Maulidah</strong></p>
+                    </div>
+                    <span class="script amp float" data-aos="zoom-in" data-aos-duration="800">&</span>
+                    <div class="person" data-aos="fade-left" data-aos-duration="1000" data-aos-offset="120">
+                        <h2 class="script">Iis Yulianti, S.Pd.<br>(Iis)</h2>
+                        <p class="parents">Putri Pertama dari<br><strong>Bpk. M. Wadris & Ibu Istikomah</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="quote">
+            <div class="container">
+                <div class="quote-card" data-aos="zoom-in" data-aos-duration="1000">
+                    <p class="quote-text">“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya di antaramu rasa kasih dan sayang.”</p>
+                    <p class="quote-src">— QS. Ar-Rum: 21</p>
+                </div>
+            </div>
+        </section>
+        <section class="event">
+            <div class="container">
+                <p class="section-label" data-aos="fade-up">Detail Acara</p>
+                <div class="divider" data-aos="fade-up"></div>
+                <div class="event-card" data-aos="zoom-in-up" data-aos-duration="1000">
+                    <h2 class="script">Resepsi Perkawinan</h2>
+                    <p class="when">Minggu, 04 Oktober 2026</p>
+                    <p class="time">Pukul 08.00 WIB — Selesai</p>
+                    <div class="where">
+                        <strong>Bertempat di</strong>
+                        <address id="address-text">Jl. Putri Junjung Buih, RT 008 / RW 002,<br>Pembuang Hulu II, Kec. Hanau, Kab. Seruyan.</address>
+                    </div>
+                    <div class="actions">
+                        <a class="btn btn-gold" href="https://www.google.com/maps?q=-2.48565,112.132341" target="_blank" rel="noopener noreferrer">📍 Buka di Maps</a>
+                        <button class="btn btn-outline" id="btn-copy-address" type="button">📋 Salin Alamat</button>
+                    </div>
+                    <div class="extra-actions">
+                        <button class="btn btn-outline" id="btn-calendar" type="button">📅 Simpan ke Kalender</button>
+                        <button class="btn btn-outline" id="btn-share" type="button">🔗 Bagikan Undangan</button>
+                    </div>
+                    <div class="map-wrap" data-aos="fade-up" data-aos-delay="120">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d5553.501126360988!2d112.13234100000001!3d-2.4856499999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMsKwMjknMDguMyJTIDExMsKwMDcnNTYuNCJF!5e1!3m2!1sen!2sid!4v1790579941939!5m2!1sen!2sid" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Lokasi Resepsi Perkawinan"></iframe>
+                    </div>
+                    <div class="countdown" id="countdown" data-aos="fade-up" data-aos-delay="200">
+                        <div class="unit"><span class="num" id="days">00</span><span class="lbl">Hari</span></div>
+                        <div class="unit"><span class="num" id="hours">00</span><span class="lbl">Jam</span></div>
+                        <div class="unit"><span class="num" id="minutes">00</span><span class="lbl">Menit</span></div>
+                        <div class="unit"><span class="num" id="seconds">00</span><span class="lbl">Detik</span></div>
+                    </div>
+                    <div class="started" id="event-started">🎉 Acara Telah Dimulai 🎉</div>
+                </div>
+                <div class="gallery" data-aos="fade-up" data-aos-duration="1200">
+                    <p class="gallery-title">Galeri</p>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" data-index="0">
+                            <img src="foto1.jpeg" alt="Foto 1 Lana & Iis" loading="lazy">
+                        </div>
+                        <div class="gallery-item" data-index="1">
+                            <img src="foto2.jpeg" alt="Foto 2 Lana & Iis" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="hosts">
+            <div class="container">
+                <p class="section-label" data-aos="fade-up">Turut Mengundang</p>
+                <div class="divider" data-aos="fade-up"></div>
+                <p class="desc" data-aos="fade-up">Kehadiran dan doa restu Bapak/Ibu/Saudara/i<br>merupakan suatu kehormatan dan kebahagiaan bagi kami.</p>
+                <ul class="host-list">
+                    <li data-aos="fade-right" data-aos-delay="60"><span class="num">01</span> Bpk. Rudi</li>
+                    <li data-aos="fade-right" data-aos-delay="120"><span class="num">02</span> Ibu Neni Maulidah</li>
+                    <li data-aos="fade-right" data-aos-delay="180"><span class="num">03</span> Bpk. M. Wadris</li>
+                    <li data-aos="fade-right" data-aos-delay="240"><span class="num">04</span> Ibu Istikomah</li>
+                    <li data-aos="fade-right" data-aos-delay="300"><span class="num">05</span> Bpk. Madiun</li>
+                    <li data-aos="fade-right" data-aos-delay="360"><span class="num">06</span> Bpk. Sudirman</li>
+                    <li data-aos="fade-right" data-aos-delay="420"><span class="num">07</span> Bpk. Risna Jaya</li>
+                </ul>
+            </div>
+        </section>
+        <section class="footer">
+            <div data-aos="zoom-in" data-aos-duration="1200">
+                <h2 class="script">Terima Kasih</h2>
+                <p class="closing">Kami yang berbahagia,</p>
+                <p class="names">Lana & Iis</p>
+            </div>
+        </section>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 850, easing: 'ease-out-cubic', once: false, mirror: true, offset: 50 });
+        (function () {
+            const param = new URLSearchParams(window.location.search).get('to');
+            if (!param) return;
+            try {
+                document.getElementById('guest-name').textContent = decodeURIComponent(param.replace(/\+/g, ' '));
+            } catch {
+                document.getElementById('guest-name').textContent = param;
+            }
+        })();
+        const cover = document.getElementById('cover');
+        const main = document.getElementById('main');
+        const bgMusic = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        const btnOpen = document.getElementById('btn-open');
+        const toastEl = document.getElementById('toast');
+        let isPlaying = false;
+        function showToast(msg, ms = 2200) {
+            toastEl.textContent = msg;
+            toastEl.classList.add('is-show');
+            clearTimeout(showToast._t);
+            showToast._t = setTimeout(() => toastEl.classList.remove('is-show'), ms);
+        }
+        function openInvitation() {
+            cover.classList.add('is-hidden');
+            const onEnd = (e) => {
+                if (e.propertyName !== 'transform') return;
+                cover.removeEventListener('transitionend', onEnd);
+                cover.style.display = 'none';
+            };
+            cover.addEventListener('transitionend', onEnd);
+            main.classList.add('is-visible');
+            document.body.classList.remove('locked');
+            setTimeout(() => AOS.refresh(), 140);
+            playMusic();
+            launchConfetti();
+        }
+        btnOpen.addEventListener('click', openInvitation);
+        async function playMusic() {
+            try {
+                await bgMusic.play();
+                isPlaying = true;
+                musicBtn.classList.add('is-visible', 'is-playing');
+                musicBtn.classList.remove('is-paused');
+                musicBtn.textContent = '🎵';
+            } catch {
+                musicBtn.classList.add('is-visible', 'is-paused');
+                musicBtn.textContent = '🔇';
+            }
+        }
+        function toggleMusic() {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicBtn.textContent = '🔇';
+                musicBtn.classList.remove('is-playing');
+                musicBtn.classList.add('is-paused');
+            } else {
+                bgMusic.play().then(() => {
+                    musicBtn.textContent = '🎵';
+                    musicBtn.classList.add('is-playing');
+                    musicBtn.classList.remove('is-paused');
+                }).catch(() => showToast('Gagal memutar musik'));
+            }
+            isPlaying = !isPlaying;
+        }
+        musicBtn.addEventListener('click', toggleMusic);
+        async function copyText(text, okMsg) {
+            try {
+                await navigator.clipboard.writeText(text);
+                showToast(okMsg);
+                return true;
+            } catch {
+                const ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.cssText = 'position:fixed;opacity:0';
+                document.body.appendChild(ta);
+                ta.select();
+                try {
+                    document.execCommand('copy');
+                    showToast(okMsg);
+                    return true;
+                } catch {
+                    showToast('Gagal menyalin');
+                    return false;
+                } finally {
+                    document.body.removeChild(ta);
+                }
+            }
+        }
+        document.getElementById('btn-copy-address').addEventListener('click', async function () {
+            const ok = await copyText(
+                'Jl. Putri Junjung Buih, RT 008 / RW 002, Pembuang Hulu II, Kec. Hanau, Kab. Seruyan.',
+                'Alamat berhasil disalin!'
+            );
+            if (ok) {
+                this.classList.add('is-copied');
+                this.textContent = '✓ Tersalin';
+                setTimeout(() => {
+                    this.classList.remove('is-copied');
+                    this.textContent = '📋 Salin Alamat';
+                }, 2000);
+            }
+        });
+        const target = new Date('2026-10-04T08:00:00+07:00').getTime();
+        function tick() {
+            const dist = target - Date.now();
+            if (dist < 0) {
+                clearInterval(timer);
+                document.getElementById('countdown').style.display = 'none';
+                document.getElementById('event-started').classList.add('is-active');
+                return;
+            }
+            const d = Math.floor(dist / 86400000);
+            const h = Math.floor((dist % 86400000) / 3600000);
+            const m = Math.floor((dist % 3600000) / 60000);
+            const s = Math.floor((dist % 60000) / 1000);
+            document.getElementById('days').textContent = String(d).padStart(2, '0');
+            document.getElementById('hours').textContent = String(h).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+        }
+        tick();
+        const timer = setInterval(tick, 1000);
+        (function spawnParticles() {
+            const box = document.getElementById('particles');
+            if (!box) return;
+            for (let i = 0; i < 18; i++) {
+                const p = document.createElement('span');
+                p.className = 'particle';
+                p.style.left = Math.random() * 100 + '%';
+                p.style.animationDuration = (8 + Math.random() * 12) + 's';
+                p.style.animationDelay = (Math.random() * 8) + 's';
+                p.style.width = p.style.height = (2 + Math.random() * 4) + 'px';
+                box.appendChild(p);
+            }
+        })();
+        const progressBar = document.getElementById('progress');
+        window.addEventListener('scroll', () => {
+            const h = document.documentElement.scrollHeight - window.innerHeight;
+            progressBar.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+            const toTop = document.getElementById('to-top');
+            if (window.scrollY > 400) toTop.classList.add('is-visible');
+            else toTop.classList.remove('is-visible');
+        }, { passive: true });
+        document.getElementById('to-top').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.getElementById('btn-share').addEventListener('click', async () => {
+            try {
+                if (navigator.share) {
+                    await navigator.share({
+                        title: 'Undangan Pernikahan Lana & Iis',
+                        text: 'Minggu, 04 Oktober 2026 — Mohon doa restu dan kehadirannya.',
+                        url: window.location.href
+                    });
+                } else {
+                    await copyText(window.location.href, 'Link undangan berhasil disalin!');
+                }
+            } catch {}
+        });
+        document.getElementById('btn-calendar').addEventListener('click', () => {
+            const title = encodeURIComponent('Resepsi Pernikahan Lana & Iis');
+            const details = encodeURIComponent('Resepsi Perkawinan Lana & Iis\nJl. Putri Junjung Buih, RT 008 / RW 002, Pembuang Hulu II, Kec. Hanau, Kab. Seruyan.');
+            const location = encodeURIComponent('Jl. Putri Junjung Buih, Pembuang Hulu II, Kec. Hanau, Kab. Seruyan');
+            const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20261004T010000Z/20261004T100000Z&details=${details}&location=${location}`;
+            window.open(url, '_blank', 'noopener');
+            showToast('Membuka Google Calendar...');
+        });
+        function launchConfetti() {
+            const canvas = document.getElementById('confetti');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            const colors = ['#d4af78', '#e8d5b5', '#a88b5a', '#f0ebe3', '#c0392b'];
+            const pieces = [];
+            for (let i = 0; i < 80; i++) {
+                pieces.push({
+                    x: Math.random() * canvas.width, y: Math.random() * canvas.height * -0.5,
+                    w: 6 + Math.random() * 6, h: 4 + Math.random() * 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    vy: 2 + Math.random() * 4, vx: -1.5 + Math.random() * 3,
+                    rot: Math.random() * Math.PI, vr: -0.1 + Math.random() * 0.2
+                });
+            }
+            let frame = 0;
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                pieces.forEach(p => {
+                    p.x += p.vx; p.y += p.vy; p.rot += p.vr; p.vy += 0.05;
+                    ctx.save();
+                    ctx.translate(p.x, p.y);
+                    ctx.rotate(p.rot);
+                    ctx.fillStyle = p.color;
+                    ctx.globalAlpha = Math.max(0, 1 - frame / 120);
+                    ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+                    ctx.restore();
+                });
+                frame++;
+                if (frame < 120) requestAnimationFrame(draw);
+                else ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+            requestAnimationFrame(draw);
+        }
+        /* Lightbox — hanya 2 foto */
+        (function () {
+            const images = ['foto1.jpeg', 'foto2.jpeg'];
+            let current = 0;
+            const lb = document.getElementById('lightbox');
+            const lbImg = document.getElementById('lightbox-img');
+            function open(i) {
+                current = i;
+                lbImg.src = images[current];
+                lb.classList.add('is-open');
+                lb.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+            function close() {
+                lb.classList.remove('is-open');
+                lb.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+            function nav(dir) {
+                current = (current + dir + images.length) % images.length;
+                lbImg.src = images[current];
+            }
+            document.querySelectorAll('.gallery-item').forEach(el => {
+                el.addEventListener('click', () => open(Number(el.dataset.index)));
+            });
+            lb.querySelector('.lb-close').addEventListener('click', close);
+            lb.querySelector('.lb-prev').addEventListener('click', () => nav(-1));
+            lb.querySelector('.lb-next').addEventListener('click', () => nav(1));
+            lb.addEventListener('click', (e) => { if (e.target === lb) close(); });
+            document.addEventListener('keydown', (e) => {
+                if (!lb.classList.contains('is-open')) return;
+                if (e.key === 'Escape') close();
+                if (e.key === 'ArrowLeft') nav(-1);
+                if (e.key === 'ArrowRight') nav(1);
+            });
+        })();
+    </script>
+</body>
+</html>
